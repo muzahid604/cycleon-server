@@ -69,6 +69,7 @@ async function run() {
             const result = await orderCollection.insertOne(order);
             res.send(result)
         })
+        //get
         app.get('/order', async (req, res) => {
             const query = {};
             const cursor = orderCollection.find(query);
